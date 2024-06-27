@@ -18,7 +18,7 @@ class EventPlayerMove(private val plugin: NoVoid) : Listener {
     }
 
     fun loadConfig() {
-        plugin.reloadConfig() // Reload configuration from disk
+        plugin.reloadConfig()
         val config = plugin.config
         worldname = config.getString("void.worldname", "world") ?: "world"
         voidY = config.getInt("void.voidY", 64)
@@ -48,7 +48,7 @@ class EventPlayerMove(private val plugin: NoVoid) : Listener {
 
     fun updateTeleportCommand(newCommand: String) {
         teleportCommand = newCommand
-        loadConfig() // Ensure config is reloaded if teleport command changes affect config
+        loadConfig()
     }
 
     @EventHandler
