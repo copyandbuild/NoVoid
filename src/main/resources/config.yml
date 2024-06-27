@@ -1,0 +1,4 @@
+void:
+  worldname: "Weltname"
+  voidY: 64
+  teleportCommand: "spawn"
